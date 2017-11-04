@@ -10,7 +10,7 @@ vgg16_notop = application_vgg16(weights = 'imagenet', include_top = FALSE)
 i=1
 for(i in 1:5)
 {
-  img = image_load( paste0("/images/bp0", i,".jpg"), target_size = c(224,224))
+  img = image_load( paste0("images/bp0", i,".jpg"), target_size = c(224,224))
   x = image_to_array(img)
   
   dim(x) <- c(1, dim(x))
